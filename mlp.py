@@ -72,11 +72,11 @@ class Mlp():
         soma = 0
         for i in range(0,4):
             soma += self.yd_y[i] ** 2
-        self.mse = (1 / 4) * soma
+        self.mse = 0.25 * soma
         return self.mse
 
     def treinar(self):
-        while self.calcular_mse() < 1 and self.epoca < 10000:
+        while self.calcular_mse() > 1 and self.epoca < 10000:
             self.epoca += 1
             for i in range(0,4):
                 #calculo do y
