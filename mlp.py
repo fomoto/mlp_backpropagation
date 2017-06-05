@@ -139,5 +139,6 @@ m.calcular_y() #primeiro calculo Y
 m.calcular_mse()
 m.treinar()
 print("MSE: " + str(m.mse))
+print("Epoca: " + str(m.epoca))
 for i in range(0,4):
     print("x1: " + str(padrao[i][0]) + " x2: " + str(padrao[i][1]) + " y: " + str(m.y[i]))
